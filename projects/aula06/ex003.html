@@ -19,8 +19,26 @@
     <h1>Hello World!!</h1>
     <p>Me livrei da maldicao</p>
     <script>
-        var nome = window.prompt('Blz, qual e o seu nome?')
-        window.alert('e um grande prazer te conhecer ' + nome)
+        /*var nome = window.prompt('Blz, qual e o seu nome?') usar Shift Alt A
+        window.alert('e um grande prazer te conhecer ' + nome) 
+        
+        Para converter numero para Sring se usar String(n) ou n.toSring()
+
+        > `O aluno ${nome} com ${idade} anos tirou a nota ${nota}` usando placeholders
+
+        */
+        var numero1 = Number.parseFloat(window.prompt('Digite um numero: '))
+        var numero2 = Number(window.prompt('Digite outro numero: ')) // para deixar o JS decidir 
+        soma = numero1 + numero2
+        //window.alert('O resultado da soma entre ' + numero1 + ' e ' + numero2 + ' e igual a: ' + soma) 
+        window.alert(`A soma entre ${numero1} e ${numero2} e: ${numero1 + numero2}`) // da pra usar a soma tmb
+        var teste = window.prompt('Digite alguma coisa ai: ')
+        testelength = teste.length
+        window.alert(`O tamanho do seu texto é: ${teste.length}`) // tambem da para usar testelength2
+
+        // s.toUpperCase() deixa tudo em maiusculas e s.toLowerCase() tudo em minusculas
+
+
     </script>
 </body>
 </html>
