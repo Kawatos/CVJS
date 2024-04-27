@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM events</title>
+    <style>
+        div#area {
+            background: rgb(42, 139, 42);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        eventos de mouse:
+
+        mouseenter: para quando o mouse passa por cima do elemento
+        mousemove: para quando o mouse ja em cima se move
+        mousedown e mouseup: quando o moouse e precionado e depois solto
+        click: os dois de cima rapido
+        mouseout: para quando o mouse sair do elemento
+     -->
+    <div id="area"> <!-- onclick="clicou()" onmouseenter="entrou()" onmouseout="saiu()"  Eu posso adicionar tudo isso apos a id, mas se recomenda usar os event listeners-->
+        interaja
+    </div>
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicou)
+        a.addEventListener('mouseenter', entrou)
+        a.addEventListener('mouseout', saiu)
+
+        function clicou() {
+            
+            window.document.getElementById('area').style.background = ('rgb(68, 125, 199)') // dava para colocar uma variavel no inicio e dai fazer ela ficar colorida
+            /* 
+            var cordobloco = window.document.getElementById('area')
+            cordobloco.style.background = ('rgb(68, 125, 199)') 
+            cordobloco.innerHTML = 'Clicou'
+             */
+            //tipo isso.
+        }
+        function entrou() {
+            a.innerText = 'Entrou oni-chan  o (◡‿◡✿)'
+
+        }
+
+        function saiu() {
+            a.innerText = 'Saiu oni-chan  (─‿‿─)'
+        }
+
+            
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando numeros</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+
+        }
+        input {
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+        div#res {
+            margin-top: 20px
+        }
+    </style>
+</head>
+<body>
+    <!-- aqui nesse codigo eu mostro como fazer soma de valores e exibir eles no mesmo elemento -->
+    <h1>Somando valores</h1>
+
+    <input type="number" name="txtn1" id="txtn1ID"> + 
+    <input type="number" name="txtn2" id="txtn2ID">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado:</div>
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1ID')
+            var tn2 = window.document.querySelector('input#txtn2ID') // id# class.
+
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value) // da pra usar so num Number.parsefloat mas e bom usar o parse. 
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            
+            res.innerHTML = `Resultado: ${n1} + ${n2} = ${s}`
+        }
+    </script>
+</body>
+</html>

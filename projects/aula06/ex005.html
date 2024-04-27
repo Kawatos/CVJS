@@ -23,14 +23,18 @@
     <div id="msg2">Usando querySelector</div>
     <div class="filosofia">Usando class no QS</div>
     <script>
-        var p1 = window.document.getElementsByTagName('p')[0] // quando o nome esta no ploral, da para pegar o conteudo especificando a tag
+        var p1 = window.document.getElementsByTagName('p')[0] // quando o nome esta no plural, da para pegar o conteudo especificando a tag
         window.document.write(p1.innerHTML) // innerText deixa so o texto, enquanto isso, o innerHTML deixa tudo
+
         var idteste = window.document.getElementById('ex1')
         window.document.write('<br>' + idteste.innerHTML)
+
         var classteste = window.document.getElementsByClassName('filosofia')[0]
         window.document.write('<br>' + classteste.innerHTML)
+
         var msgverde = window.document.getElementById('msg') // eu crio uma variavel, atribuo a ela o conteudo de msg e depois mudo isso tudo de tabela para verde
         msgverde.style.background = 'green'
+
         window.document.getElementById('msg').innerHTML = 'Isso foi editado atraves do JS'
         msg.innerHTML = 'Mudou de novo' // msm coisa que o de cima
         window.document.write('<br>' + classteste) // exibe o que raios e a coisa que tu colocou ali, mas n o seu conteudo
