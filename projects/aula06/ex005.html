@@ -6,7 +6,7 @@
     <title>Primeiros passos com DOM</title>
     <style>
         body {
-            background: rgb(68, 125, 199);
+            /* background: rgb(68, 125, 199); */
             color: white;
             font: normal 18pt Arial;
 
@@ -16,10 +16,37 @@
 <body>
     <h1>Iniciando estudos DOM</h1>
     <p>Aqui vai o resultado</p>
+    <p id="ex1">deu certo</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.<br></p>
-    <div>Clique em mim</div>
+    <div id="msg">Clique em mim</div>
+    <div class="filosofia">Eu n sei de mais nada nessa vida</div>
+    <div id="msg2">Usando querySelector</div>
+    <div class="filosofia">Usando class no QS</div>
     <script>
-        
-    </script>
+        var p1 = window.document.getElementsByTagName('p')[0] // quando o nome esta no ploral, da para pegar o conteudo especificando a tag
+        window.document.write(p1.innerHTML) // innerText deixa so o texto, enquanto isso, o innerHTML deixa tudo
+        var idteste = window.document.getElementById('ex1')
+        window.document.write('<br>' + idteste.innerHTML)
+        var classteste = window.document.getElementsByClassName('filosofia')[0]
+        window.document.write('<br>' + classteste.innerHTML)
+        var msgverde = window.document.getElementById('msg') // eu crio uma variavel, atribuo a ela o conteudo de msg e depois mudo isso tudo de tabela para verde
+        msgverde.style.background = 'green'
+        window.document.getElementById('msg').innerHTML = 'Isso foi editado atraves do JS'
+        msg.innerHTML = 'Mudou de novo' // msm coisa que o de cima
+        window.document.write('<br>' + classteste) // exibe o que raios e a coisa que tu colocou ali, mas n o seu conteudo
+        // o name e a mesma coisa que o pelo className
+
+        var idmsg2 = window.document.querySelector('div#msg2')
+        window.document.write('<br>' + idmsg2.innerHTML)
+
+        var segundaDivFilosofia = document.querySelectorAll('.filosofia')[1]; // para mais de um item, como em uma classe, tipo ou name, usa-se o querySelectorAll
+        window.document.write('<br>' + segundaDivFilosofia.innerHTML);
+
+        p1.style.color = 'blue'
+        var corpodocodigo = window.document.body
+        corpodocodigo.style.background = 'rgb(68, 125, 199)'
+
+
+    </script> 
 </body>
 </html>
