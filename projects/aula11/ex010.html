@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran simulator</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    Insira aqui a velocidade do seu carro: <input type="number" name="velocidade" id="txtvel"> Km/h <br>
+    insira aqui a regiao onde voce estava (1. Cidade ou 2. Rodovia): <input type="number" name="ragiao" id="txtreg">
+    <input type="button" value="Verificar" id="ver" onclick="calcular()">    
+    <div id="resultadodiv">Sua velocidade e o resultado aparecerao aqui.</div>
+
+    <script>
+        var divresult = window.document.querySelector('div#resultadodiv')
+        /* 
+            Detalhe, desde que os elementos nao sejam carregados na funcao, como as variaveis do codigo que so existem quando eu aperto o botao,
+            as demais variaveis podem ser declaras antes da funcao e funcionam, 
+
+            segundo, tanto usar o id + .innerHTML/Text = 'lorem' quanto o nome da variavel criado pelo getElement funciona.
+
+            terceiro usando innerHTML da para usar HTML basico, respeitando marcacoes
+        */
+        function calcular() {
+            var txtvelo = window.document.getElementById('txtvel')
+            var txtregi = window.document.getElementById('txtreg')
+            var nvel = Number(txtvelo.value)
+            var nreg = Number(txtregi.value)
+
+            if (nreg === 1) {
+                if (nvel > 60) {
+                    resultadodiv.innerHTML = `<p>Sua velocidade de <strong>${nvel} Km/h</strong>, na cidade recebe multas!</p>`
+                    divresult.innerHTML += `<p>O valor da sua multa e de ${(nvel + (nvel * 0.80)).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</p>` 
+                } else {
+                    resultadodiv.innerHTML = `<p>Sua velocidade de ${nvel} Km/h, na cidade nao recebe multas!</p>`
+                    divresult.innerHTML += `<p>Use sempre o sinto de seguranca!</p>` 
+                }
+            } else if (nreg === 2) {
+                if (nvel > 120) {
+                    divresult.innerHTML += `<p>O valor da sua multa e de ${(nvel + (nvel * 0.80)).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</p>` 
+                } else {
+                    divresult.innerHTML = `<p>Sua velocidade de ${nvel} Km/h, na rodovia nao recebe multas!</p>` 
+                    divresult.innerHTML += `<p>Use sempre o sinto de seguranca!</p>` 
+                }
+            }
+            
+
+        }
+    </script>
+</body>
+</html>
