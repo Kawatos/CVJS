@@ -19,10 +19,16 @@
     <h1>Hello World!!</h1>
     <p>Me livrei da maldicao</p>
     <script>
+        // numerodeteste.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) n = n + 4 funciona e pode ser reduzida para n += 4 ou simplesmente n ++ como soma 1 rapida ou decrecao 1 rapida
         var nome = window.prompt(`Qual e o seu nome? `)
-        document.write(`Seu nome tem ${nome.length} letras`)
-
-
+        document.write(`Ola <strong>${nome}</strong>! Seu nome tem ${nome.length} letras</h2><br><br>`)
+        document.write(`Seu nome em maiusculas e ${nome.toUpperCase()}<br>`)
+        var numero = Number(window.prompt(`Digite um numero quebrado qualquer: `))
+        document.write(`O valor que voce digitou com 3 casas decimais e: ${numero.toFixed(3)} <br>`)
+        document.write(`Masse voce for brasileiro ou n usar numeros decimais precedidos de virgula, seu numero e: ${numero.toFixed(3).replace('.', ',')} <br>`) // o primeiro parametro e um ponto e o segundo parametro e uma virgula.
+        var numero = Number(window.prompt(`Teste: `))
+        document.write(`O valor que voce digitou com 3 casas decimais e: ${numero.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} <br>`)
+        
     </script>
 </body>
 </html>
