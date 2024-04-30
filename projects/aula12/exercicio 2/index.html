@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hora do dia</title>
+    <title>Verificador de idade</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1 id="titulo">Hora do dia</h1>
+        <h1 id="titulo">Verificador de idade</h1>
     </header>
     <main>
-        <p id="horaatual">Teste</p>
+        <h2>Ano de Nascimento</h2><input type="date">
         <div id="imagem">
-            <img src="imagens/manha.png" alt="">
+            <img src="imagens/menino.png" alt="">
         </div>
     </main>
     <footer>
@@ -21,20 +21,9 @@
     </footer>
 
     <script>
-        window.onload = paginaabriu;
+        
 
-        function paginaabriu() {
-            var horario = new Date()
-            var hora = horario.getHours()
-            var imagem = window.document.getElementById('imagem').getElementsByTagName('img')[0]
-            if (hora >= 6 && hora < 12) {
-                imagem.src = 'imagens/manha.png'
-            } else if (hora >= 12 && hora < 18) {
-                imagem.src = 'imagens/tarde.png'
-            } else {
-                imagem.src = 'imagens/noite.png'
-            }
-        }
+        
         
         
     </script>
