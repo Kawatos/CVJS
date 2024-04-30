@@ -41,19 +41,35 @@ main {
 
 /* Estilos específicos para os parágrafos dentro da seção principal */
 main p {
-    padding: 30px;
+    padding: 5px;
+    padding-left: 40px;
+    padding-top: 10px;
+    font-size: 20px;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+p#isextxt {
+    display: inline-block;
+    text-align: left;
+    padding: 0px;
+}
+
+p#idescricao {
+    padding: 5px;
+    text-align: center;
     font-size: 30px;
-    padding-bottom: 40px;
 }
 
 /* Estilos para os inputs (ocultando-os) */
-input {
+/* input {
     display: ;
-}
+} */
 
 /* Estilos para as imagens */
-img {
+img#iimagem {
     border-radius: 50%;
+    width: 350px;
 }
 
 /* Estilos para o rodapé */

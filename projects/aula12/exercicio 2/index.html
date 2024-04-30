@@ -11,9 +11,19 @@
         <h1 id="titulo">Verificador de idade</h1>
     </header>
     <main>
-        <h2>Ano de Nascimento</h2><input type="date">
+        <form action="post" onsubmit="verificou(); return false">
+            <p>
+                <label for="iano">Em que ano voce nasceu</label>
+                <input type="number" name="nano" id="iano" min="1900" max="2024" required> <br>
+                Sexo: <input type="radio" name="Sexo" id="isexmas" value="Masculino" required> <label for="isexmas">Masculino</label>
+                <input type="radio" name="Sexo" id="isexfem" value="Feminino" required> <label for="isexfem">Feminino</label> <br>
+                <input type="submit" value="Verificar" id="iverificar">
+            </p>
+        </form>
+
         <div id="imagem">
-            <img src="imagens/menino.png" alt="">
+            <p id="idescricao">teste</p>
+            <img src="imagens/menino.png" alt="pessoa" id="iimagem">
         </div>
     </main>
     <footer>
@@ -22,10 +32,39 @@
 
     <script>
         
+        function verificou() {
+            var data = new Date()
+            var anoa = data.getFullYear()
+            var txanop = window.document.getElementById('iano')
+            var txsexmas = window.document.getElementById('isexmas')
+            var txsexfem = window.document.getElementById('isexfem')
+            var nmranop = anoa - Number(txanop.value)
+            
+            if (txsexmas.checked) {
+                if (nmranop <= 18) {
+                    idescricao.innerHTML = 'Menino'
+                    iimagem.src = 'imagens/menino.png'
+                } else if (nmranop <= 50) {
+                    idescricao.innerHTML = 'Homem'
+                    iimagem.src = 'imagens/homem.png'
+                } else {
+                    idescricao.innerHTML = 'Idoso'
+                    iimagem.src = 'imagens/idoso.png'
+                }
+            } else if (txsexfem.checked) {
+                if (nmranop <= 18) {
+                    idescricao.innerHTML = 'Menina'
+                    iimagem.src = 'imagens/menina.png'
+                } else if (nmranop <= 50) {
+                    idescricao.innerHTML = 'Mulher'
+                    iimagem.src = 'imagens/mulher.png'
+                } else {
+                    idescricao.innerHTML = 'Idosa'
+                    iimagem.src = 'imagens/idosa.png'
+                }
+            }
 
-        
-        
-        
+        }
     </script>
 </body>
 </html>
