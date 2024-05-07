@@ -14,8 +14,9 @@ function contar() {
 
     if (numinicio >= numfim || numpasso >= numfim) {
         icontando.innerHTML = `Você digitou valores invalidos.`
-    } else if (numpasso == 0){
+    } else if (numcontador == 0){
         numcontador = 1
+        numpasso = 1
         for (numinicio; numcontador <= numfim; numcontador += numpasso) {
             resultado += ` ${numcontador} 👉`
         }

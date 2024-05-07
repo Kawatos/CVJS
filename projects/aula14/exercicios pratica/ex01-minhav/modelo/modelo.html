@@ -11,23 +11,22 @@
         <h1>Vamos contar?</h1>
     </header>
     <section>
-        <div>
-            <p>
-                <label for="iinicio">Inicio: </label>
-                <input type="number" id="iinicio"> <br>
-            </p>
-            <p>
-                <label for="ifim">Fim: </label>
-                <input type="number" id="ifim"> <br>
-            </p>
-            <p>
-                <label for="ipasso">Passo: </label>
-                <input type="number" id="ipasso">
-            </p>
-            <p>
-                <input type="button" value="Contar" id="icontar" onclick="contar()">
-            </p>
-
+            <div>
+                <p>
+                    <label for="iinicio">Inicio: </label>
+                    <input type="number" id="iinicio" required> <br>
+                </p>
+                <p>
+                    <label for="ifim">Fim: </label>
+                    <input type="number" id="ifim" required> <br>
+                </p>
+                <p>
+                    <label for="ipasso">Passo: </label>
+                    <input type="number" id="ipasso" required>
+                </p>
+                <p>
+                    <input type="submit" value="Contar" id="icontar" onclick="contar()">
+                </p>
         </div>
         <div>
             <p id="icontando">Preparando a contagem...</p>
