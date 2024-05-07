@@ -5,6 +5,20 @@ body {
     font: normal 15pt Arial;
 }
 
+table {
+    width: 200px;
+    border-collapse: collapse;
+    position: relative;
+}
+
+table, caption {
+    text-align: center;
+}
+
+td, th {
+    border: 1px solid black;
+}
+
 header {
     color: white;
     text-align: center;
